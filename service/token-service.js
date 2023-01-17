@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const tokenModel = require('../models/token-model')
-const { generateKeyPairSync } = require('node:crypto')
+const { generateKeyPairSync } = require('crypto')
 
 let passphrase = 'top secret'
 
