@@ -17,6 +17,7 @@ const corsOptions = {
    },
    optionsSuccessStatus: 200,
    credentials: true,
+   allowedHeaders: "*"
 }
 
 const PORT = process.env.PORT || 3001
