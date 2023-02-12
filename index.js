@@ -16,6 +16,7 @@ const corsOptions = {
       }
    },
    optionsSuccessStatus: 200,
+   credentials: true,
 }
 
 const PORT = process.env.PORT || 3001
@@ -47,4 +48,5 @@ const start = async () => {
    }
 }
 start()
+
 
