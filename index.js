@@ -13,7 +13,13 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 // Обязательно указать с каким доменом обмениваться данными
-app.use(cors({ credentials: true, origin: process.env.CLIENT_URL }))
+app.use(
+   cors({
+      credentials: true,
+      origin: process.env.CLIENT_URL,
+      allowedHeaders: ['Authorization'],
+   }),
+)
 
 app.use('/api', router)
 // Error middleware должен идти последним
@@ -35,5 +41,4 @@ const start = async () => {
    }
 }
 start()
-
 
