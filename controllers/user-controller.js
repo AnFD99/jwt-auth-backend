@@ -17,6 +17,8 @@ class UserController {
          res.cookie('refreshToken', userData.refreshToken, {
             maxAge: 30 * 24 * 60 * 60 * 1000,
             httpOnly: true, // Чтобы cookie нельзя было получать в браузере
+            secure: false,
+            sameSite: 'none',
          })
 
          // Возвращение данных на клиент
@@ -87,6 +89,7 @@ class UserController {
 }
 
 module.exports = new UserController()
+
 
 
 
